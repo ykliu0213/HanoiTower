@@ -11,22 +11,7 @@ public class HanoiTower {
 		refresh(numOfDisks);
 	}
 
-	/**
-	 * @TODO Initialize hanoi tower with some disks (numOfDisks). A disk is
-	 *       represent by an integer number. Bigger number stand for bigger
-	 *       disk. Also, the smallest disk will be represented by 1, not 0.
-	 * 
-	 *       In this method, you will be given a parameter "numOfDisks" which
-	 *       describes how many disks are there in this hanoi tower. Please put
-	 *       those disks into rodA in order; bigger disks should be put first.
-	 * 
-	 * @HINT: You have to reassign appropriate value/instances to the following fields:
-	 * @this.numOfDisks
-	 * @this.times
-	 * @this.rodA
-	 * @this.rodB
-	 * @this.rodC
-	 */
+	// initialize hanoi tower
 	public void refresh(int numOfDisks) {
 		this.numOfDisks = numOfDisks;
 		this.times = 0;
@@ -50,11 +35,6 @@ public class HanoiTower {
 		execute(this.numOfDisks, rodA, rodC, rodB);
 	}
 
-	/**
-	 * @TODO: This method should be called recursively. Move disk "n" from "src"
-	 *        (source rod) to "dest" (destination rod), and "spare" (temporary
-	 *        rod) will act as you temporary space to put disks. Call printHanoiTower() when you do a moving.
-	 */
 	private void execute(int n, MyStack<Integer> src, MyStack<Integer> dest,
 			MyStack<Integer> spare) {
 		if(n==1) {
@@ -65,19 +45,13 @@ public class HanoiTower {
 			this.execute(n-1, spare, dest, src);
 		}
 	}
-	/**
-	 * @TODO: You may use move function to help the moving between two stacks
-	 */ 
+	
 	private void move(MyStack<Integer> a, MyStack<Integer> b) {
 		this.times++;	//count how many moves
 		b.push(a.pop());	//add the top one of a to b  &  remove the top one of a
 		this.printHanoiTower();
 	}
 
-	/**
-	 * @TODO: return an integer that represent how many steps we need to
-	 *        complete this hanoi tower.
-	 */
 	public int getTimes() {
 		return this.times;
 	}
@@ -90,9 +64,6 @@ public class HanoiTower {
 		System.out.println("--------------");
 	}
 
-	
-	
-	//----------------
 	public MyStack<Integer> getRodA() {
 		return rodA;
 	}
