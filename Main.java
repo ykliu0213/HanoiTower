@@ -15,6 +15,5 @@ public class Main {
 			hanoi.start();
 			System.out.println("Please enter how many disks does the hanoi have:");
 		}
-		
 	}
 }
