@@ -5,30 +5,24 @@ import java.util.List;
 
 public class MyStack<T> {
 	private List<T> inner = new ArrayList<T>();
-	public void push(T e) {	//add a new one to the top (last position)
+
+	//add a new one to the top (last position)
+	public void push(T e) {
 		inner.add(e);
 	}
 
-	public T pop() {	//delete the last one (top one)
+	//delete the last one (top one)
+	public T pop() {
 		return inner.remove(inner.size() - 1);
 	}
 
-	public T top() {	//show the last one (top one)
+	//show the last one (top one)
+	public T top() {
 		return inner.get(inner.size() - 1);
 	}
 
-	/**
-	 * @TODO: Print a line of elements in this stack from bottom to top. Elements
-	 *        should be separated by a space. 
-	 *        Given the following input:
-	 *        MyStack<Integer> stack = new new MyStack<Integer>();
-	 *        stack.push(5); 
-	 *        stack.push(4); 
-	 *        stack.push(3);
-	 *        
-	 *        When calling stack.printStack(), print "|- 5 4 3".
-	 */
-	public void printStack() {		//show all the element in the stack from bottom to top
+	//show all the element in the stack from bottom to top
+	public void printStack() {
 		System.out.print("|-");
 		for(int i = 0 ; i < inner.size() ; i++) {
 			System.out.print(" " + inner.get(i));
@@ -36,16 +30,8 @@ public class MyStack<T> {
 		System.out.println();
 	}
 	
-
-	public int size() {		//check the size
+	//check the size
+	public int size() {
 		return inner.size();
 	}
-	
-	
-	
-	
-	
-	
-	
-	
 }
