@@ -1,5 +1,5 @@
 # HanoiTower
-Tower of Hanoi implementation using stack.<br />
+Tower of Hanoi implementation using stack.  
 (Stack Data Structure)
 
 ## What is Tower of Hanoi
